@@ -5,19 +5,9 @@ from datetime import datetime
 import pyautogui
 import winsound as sd
 
-def beepsound():
-    fr = 2000
-    du = 1000
-    sd.Beep(fr, du)
-
-def beepsound1():
-    fr = 5000
-    du = 2000
-    sd.Beep(fr, du)
-
 def job():
     now = datetime.now()
-    beepsound()
+    sd.Beep(2000, 1000)
     time.sleep(5)
     print("[작업 수행 시각] {:%H:%M:%S}".format(now)) # 커맨드 창에 동작 수행시간 출력 후
     im = pyautogui.screenshot()
@@ -80,6 +70,6 @@ while True:
         time.sleep(1)
     except Exception as e:
         print("작업 강제 종료", e)
-        beepsound1()
+        sd.Beep(5000, 2000)
         schedule.clear()         
         break            
