@@ -51,33 +51,11 @@ for _ in range(1, 8):
     if(hour == 12):
         hour += 1
     hour += 1 
-
-# 개별적으로 시간을 세팅하고 싶을 경우, ..day.at('원하는 시간')
-# schedule.every().day.at("09:05").do(job)
-# schedule.every().day.at("09:50").do(job)
-
-# schedule.every().day.at("10:05").do(job)
-# schedule.every().day.at("10:50").do(job)
-
-# schedule.every().day.at("11:05").do(job)
-# schedule.every().day.at("11:50").do(job)
-
-# schedule.every().day.at("12:05").do(job)
-# schedule.every().day.at("12:50").do(job)
-
-# schedule.every().day.at("14:05").do(job)
-# schedule.every().day.at("14:50").do(job)
-
-# schedule.every().day.at("15:05").do(job)
-# schedule.every().day.at("15:50").do(job)
-
-# schedule.every().day.at("16:05").do(job)
-# schedule.every().day.at("16:50").do(job)
-
-# schedule.every().day.at("17:05").do(job)
-# schedule.every().day.at("17:50").do(job)
+    
+# 개별적으로 시간을 세팅하고 싶을 경우 ..day.at('원하는 시간')
 
 pprint(schedule.jobs) # 예약된 job 확인
+
 while True:
     try:
         schedule.run_pending()
