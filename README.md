@@ -69,3 +69,5 @@ python autocapture.py
 
 **Project Owner** :  [YeonjiKim0316](https://github.com/YeonjiKim0316) :dog:
 <br>**Collaborator** : [guguttemi](https://github.com/guguttemi) :octopus:
+
+*잘 되면 내 탓, 안 되면 당신 탓* :ghost:
