@@ -7,9 +7,9 @@
 
 ### 1-1. Install
 
-본 프로그램은 설치 폴더 내에 포함된 autoplay.bat 파일을 통하여 보다 간편하게 실행할 수 있는데<br>
-단, autoplay.bat 파일을 통하여 프로그램을 실행하기 위해서는 프로그램 설치 시 바탕화면을 root 경로로 지정해야함<br>
-(직접 bat 파일 생성을 통해 변경 가능)
+본 프로그램은 설치 폴더 내에 포함된 autoplay.bat 파일을 통하여 보다 간편하게 실행할 수 있는데,<br>
+이 파일을 통하여 프로그램을 실행하기 위해서는 프로그램 설치 시 바탕화면을 root 경로로 지정해야함<br>
+(직접 bat 파일 작성 및 생성을 통해 변경 가능)
 
 ##### git clone을 통한 설치 
 ```
@@ -23,7 +23,7 @@ $ git clone https://github.com/guguttemi/pyautocapture.git
 
 ### 1-2. Config
 0. 압축 해제한 폴더명을 Encore로 변경
-1. code editor를 통해 autocapture.py 열기
+1. code editor를 통해 Encore/autocapture.py 열기
 2. def job() '내이름'을 자신의 이름으로 변경 후 저장
 ```
 def job():
@@ -58,26 +58,28 @@ python autocapture.py
 
 1. 13시를 제외하고 오전 9시 ~ 18시까지 매 시 05분, 50분마다 캡쳐가 자동으로 진행됨<br>
 2. 캡쳐된 이미지는 Encore 폴더 내에 현재 날짜 기준(ex. 220726/)으로 자동 생성된 폴더 내에 저장됨<br>
-3. 캡쳐된 이미지 파일명 ex. '20220726-내이름-오전-14_05.png'<br>
-4. 정해진 매 분(05, 50) 마다 캡쳐가 진행될 때 '삐' 소리가 울림(sd.Beep(2000, 1000))
+3. 캡쳐된 이미지 파일명 ex. '20220726-내이름-오전-09_05.png' / '20220726-내이름-오후-14_50.png'
+4. 정해진 매 분(05, 50) 마다 캡쳐가 진행될 때 '삐' 소리가 울림sd.Beep(2000, 1000)
 
 ## 3. 실행 결과 화면
 ![processing](https://user-images.githubusercontent.com/88642403/181045855-9ff5666c-4437-4e9c-a02e-8bec661919a9.png)
 09:05:00 ~ 17:50:00까지 설정된 상태
 
 ## 4. 참고 사항
-프로그램 실행 시 자동으로 설치되는 pip module 및 PC 내 존재하는 기존 pip module 간 충돌이 발생할 경우 가상환경 사용 권장
-```
+프로그램 실행 시 자동으로 설치되는 pip module 및 PC 내 존재하는 기존 pip module 간 충돌이 발생할 경우 가상환경 활용
+
 - venv를 활용한 가상 환경 설치
-# window
+```
+# for window
 python -m venv .venv
 .venv\scripts\activate.bat 
 
-# mac
+# for mac
 python -m venv .venv
 source .venv/bin/activate
-
+```
 - pip modules 일괄 제거
+```
 pip freeze > requirements.txt
 pip uninstall -r requirements.txt -y
 ```
