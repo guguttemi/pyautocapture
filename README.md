@@ -20,7 +20,7 @@ $ git clone https://github.com/guguttemi/pyautocapture.git
 ```
 
 ##### Download를 통한 설치
-1. [Github 메인 페이지](https://github.com/guguttemi)의 <span style='background-color:#dcffe4'>**Code&darr;**</span> 선택
+1. [Github 메인 페이지]([https://github.com/guguttemi](https://github.com/guguttemi/pyautocapture))의 <span style='background-color:#dcffe4'>**Code&darr;**</span> 선택
 2. Download ZIP click
 3. 바탕화면에 폴더 압축 해제
 
