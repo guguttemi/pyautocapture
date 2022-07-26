@@ -43,12 +43,11 @@ if now.hour < 13:
 
 ### 1-3. Run
 ##### ~.bat 파일로 실행
-_autoplay.bat_ 실행<br>
+Encore/_autoplay.bat_ 실행<br>
 
 전제 조건
 1. 현재 사용 중인 PC의 사용자 계정명이 Playdata인지 확인
 2. autocapture.py파일을 보관 중인 폴더명이 Encore인지 확인<br>
-![1](https://user-images.githubusercontent.com/88642403/181035773-2593b458-09f2-42a9-a0e8-6e128168086c.png)
 
 하단의 명령어에서 경로 수정을 통해 실행 위치 변경 가능
 ```
@@ -67,7 +66,28 @@ python autocapture.py
 3. 캡쳐된 이미지 파일명 ex. '20220726-내이름-오전-14_05.png'<br>
 4. 정해진 매 분(05, 50) 마다 캡쳐가 진행될 때 '삐' 소리가 울림(sd.Beep(2000, 1000))
 
-## 3. License
+## 3. 실행 결과 화면
+![processing](https://user-images.githubusercontent.com/88642403/181045855-9ff5666c-4437-4e9c-a02e-8bec661919a9.png)
+09:05:00 ~ 17:50:00까지 설정된 상태
+
+## 4. 참고 사항
+프로그램 실행 시 자동으로 설치되는 pip module 및 PC 내 존재하는 기존 pip module 간 충돌이 발생할 경우 가상환경 사용 권장
+```
+- venv를 활용한 가상 환경 설치
+# window
+python -m venv .venv
+.venv\scripts\activate.bat 
+
+# mac
+python -m venv .venv
+source .venv/bin/activate
+
+- pip modules 일괄 제거
+pip freeze > requirements.txt
+pip uninstall -r requirements.txt -y
+```
+
+## 5. License
 
 **Project Owner** :  [YeonjiKim0316](https://github.com/YeonjiKim0316) :dog:
 <br>**Collaborator** : [guguttemi](https://github.com/guguttemi) :octopus:
