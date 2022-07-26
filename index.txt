@@ -1,0 +1,17 @@
+기존 모듈과 충돌날 경우 참고
+
+1. 가상환경 설치
+# window
+python -m venv .venv
+.venv\scripts\activate.bat 
+
+# mac
+python -m venv .venv
+source .venv/bin/activate
+
+2. pip modules 일괄 제거
+pip freeze > requirements.txt
+pip uninstall -r requirements.txt -y
+
+Schedule 라이브러리 참조
+https://jackerlab.com/python-library-schedule/

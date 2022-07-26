@@ -1,0 +1,1 @@
+%windir%\System32\cmd.exe "/K" python C:\Users\Playdata\Desktop\Encore\autocapture.py
